@@ -1,12 +1,10 @@
 
-from cube_structure import RubiksCube 
-
-from cube_moves import horiontal,vertical 
-
+from cube_structure import *
+from cube_moves import *
 from random import randint , choice 
 
 
- def shuffle(cube, lower_bound = 5, upper_bound = 100):
+def shuffle(cube, lower_bound = 5, upper_bound = 100):
         moves = randint(lower_bound, upper_bound)
         actions = [
             ('h', 0),
@@ -18,10 +16,17 @@ from random import randint , choice
         ]
         for i in range(moves):
             a = choice(actions)
-            j = randint(0, objct.n - 1)
+            j = randint(0, cube.n - 1)
             if a[0] == 'h':
-                objct.horizontal(j, a[1])
+                print("operation-",a,"row no - ",j)
+                #print("row no - ",j)
+                horizontal(cube,j, a[1])
+                
             elif a[0] == 'v':
-                objct.vertical(j, a[1])
+                print("operation-",a,"column no -",j)
+                vertical(cube,j, a[1])
+                #print("column no -",j)
             elif a[0] == 's':
-                objct.side(j, a[1])
+                print("operation-",a,"column no -",j)
+                top_side(cube,j, a[1])
+                #print("column no -",j)

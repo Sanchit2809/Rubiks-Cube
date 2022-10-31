@@ -1,3 +1,4 @@
+from cube_structure import *
 def show(cube):
     spacing = f'{" " * (len(str(cube.struct[0][0])) + 2)}'
     l1 = '\n'.join(spacing + str(c) for c in cube.struct[0])
