@@ -80,6 +80,7 @@ class RubiksCube:
         Output: None
         """
         moves = randint(l_rot, u_rot)
+        moves = 10
         actions = [
             ('h', 0),
             ('h', 1),
