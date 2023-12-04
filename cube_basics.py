@@ -1,9 +1,7 @@
 from random import randint, choice
 
 class RubiksCube:
-    """
-    Class containing the rubiks struct code
-    """
+    
 
     def __init__(
         cube,

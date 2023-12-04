@@ -80,3 +80,8 @@ for m in moves:
         print('-----------')
 cube.show()
 
+
+cube.shuffle(
+    l_rot = MAX_MOVES if MAX_MOVES < 5 else 5,
+    u_rot = 14
+)

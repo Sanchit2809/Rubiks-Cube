@@ -44,10 +44,7 @@ if h_db is None or NEW_HEURISTICS is True:      # if h_db == none create a new D
         )
 #--------------------------------
 # #shuffling the pre defined and new cube according to the max moves 
-cube.shuffle(
-    l_rot = MAX_MOVES if MAX_MOVES < 5 else 5,
-    u_rot = 14
-)
+
 cube.show()
 print('----------')
 #--------------------------------implementing the solver 
